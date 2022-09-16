@@ -44,7 +44,7 @@ class ExpenseEntryItemList extends React.Component {
    }
    /* OK !!!!*/
    addItem=()=>{
-      /*  */
+      /* let maxID=this.state.items[0].id; Wyrzuca błąd gdy usunie sie wszystkie wiersze z list a przez to nie da sie dodać nowych */
       let maxID=this.state.items[0].id;
       for(var i = 0; i < this.state.items.length; i++) {
      console.log(this.state.items[i].id +"  _  ");
