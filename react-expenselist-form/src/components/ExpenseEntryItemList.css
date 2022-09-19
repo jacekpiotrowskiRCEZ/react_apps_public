@@ -1,0 +1,25 @@
+table{
+    width: 90%;
+    margin:1em auto;
+    border: 1px grey solid;
+}
+thead th{
+    background-color: darkgray;
+    border:1px grey solid;
+    border-collapse: collapse;
+}
+tbody td{
+background-color:lightgray;
+border:1px darkgrey solid;
+}
+.highlight{
+    background-color: coral;
+}
+.dForm_hide{
+    display:none;
+    padding:0 0 0 2em;
+}
+.dForm_show{
+    display:inline-block;
+    padding:0 0 0 2em;
+}
