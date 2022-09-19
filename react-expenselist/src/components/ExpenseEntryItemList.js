@@ -44,8 +44,15 @@ class ExpenseEntryItemList extends React.Component {
    }
    /* OK !!!!*/
    addItem=()=>{
-      /*  */
-      let maxID=this.state.items[0].id;
+    
+      //let maxID=this.state.items[0].id;
+      let maxID;
+      if(this.state.items[0] == null){
+      maxID=0;
+      }
+      else{
+      maxID=this.state.items[0].id;
+      }
       for(var i = 0; i < this.state.items.length; i++) {
      console.log(this.state.items[i].id +"  _  ");
          if(maxID<this.state.items[i].id) maxID=this.state.items[i].id;
@@ -55,9 +62,7 @@ class ExpenseEntryItemList extends React.Component {
       let newItem = prompt("Podaj nazwę pozycji");
       let newAmount =Number(prompt("Podaj kwotę"));
       let newCategory=prompt("Podaj nazwę kategorii");
-      
-/*   let myItem={ id: maxID, name: "+Exam Fees+", amount: 1245, spendDate: "2020-11-04", category: "Academic" };
-      */
+   
       let myItem={ id: maxID, name: newItem, amount: newAmount, spendDate: now, category: newCategory };
 
       this.setState(prevState=>({
@@ -72,11 +77,8 @@ class ExpenseEntryItemList extends React.Component {
    wypiszID=()=>{
       let maxID=this.state.items[0].id;
       for(var i = 0; i < this.state.items.length; i++) {
-         /*total += this.state.items[i].amount*/
-      
-         console.log(this.state.items[i].id +"  _  ");
+       console.log(this.state.items[i].id +"  _  ");
          if(maxID<this.state.items[i].id) maxID=this.state.items[i].id;
-
    }
 
    console.log("MAX  "+maxID);
